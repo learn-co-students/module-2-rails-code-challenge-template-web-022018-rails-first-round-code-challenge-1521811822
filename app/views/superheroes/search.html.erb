@@ -1,0 +1,7 @@
+<h1>Search by superpower: <%= @superheroes[0].superpower.name.titleize %> </h1>
+<ul>
+  <% @superheroes.each do |x|  %>
+  <li><%= link_to x.super_name, x %></li>
+  <% end %>
+</ul>
+<!-- This is not exactly what the instructions requested, I know. -->

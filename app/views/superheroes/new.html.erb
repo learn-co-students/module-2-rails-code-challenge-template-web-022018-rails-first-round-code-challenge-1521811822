@@ -1,0 +1,10 @@
+<h1>New Superhero</h1>
+<%= form_for @superhero do |x| %>
+<label>Name: </label><br>
+<%= x.text_field :name %><br><br>
+<label>Supername: </label><br>
+<%= x.text_field :super_name %><br><br>
+<label>Superpower: </label><br>
+<%= x.collection_select :superpower_id, Superpower.all, :id, :name %>
+<%= x.submit %>
+<% end %>
