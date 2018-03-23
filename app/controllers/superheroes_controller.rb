@@ -19,7 +19,6 @@ class SuperheroesController < ApplicationController
   end
 
   def create
-    byebug
     @superhero = Superhero.new(superhero_params)
     if @superhero.valid?
       @superhero.save
