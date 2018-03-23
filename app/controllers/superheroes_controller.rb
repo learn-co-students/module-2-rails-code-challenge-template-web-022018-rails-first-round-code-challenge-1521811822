@@ -1,6 +1,6 @@
 class SuperheroesController < ApplicationController
 
-  before_action :set_superhero, only: [:show]
+  before_action :set_superhero, only: [:show, :edit, :update, :destroy]
 
   def index
     @superpowers = Superpower.all
@@ -26,6 +26,23 @@ class SuperheroesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+  end
+
+  def update
+    if @superhero.update(superhero_params)
+      @superhero.save
+      redirect_to @superhero
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @superhero.destroy
+    redirect_to superheroes_path
   end
 
   private

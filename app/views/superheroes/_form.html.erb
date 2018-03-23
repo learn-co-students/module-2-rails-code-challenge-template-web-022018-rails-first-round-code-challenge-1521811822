@@ -13,5 +13,7 @@
   <br>
   <%= f.label "Superpower" %>
   <%= f.collection_select :superpower_id, Superpower.all, :id, :name %>
+  <br>
   <%= f.submit %>
+  <br>
 <% end %>
