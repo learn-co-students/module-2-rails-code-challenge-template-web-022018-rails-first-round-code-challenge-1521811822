@@ -1,0 +1,7 @@
+<h1><%= @superpower.name.titleize %></h1>
+<p><%= @superpower.description.capitalize %></p>
+<ul>
+  <% @superpower.superheroes.each do |x| %>
+  <li><%= link_to x.name, x %></li>
+  <% end %>
+</ul>
