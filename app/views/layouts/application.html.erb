@@ -9,6 +9,11 @@
   </head>
 
   <body>
+    <header class = "header">
+      <h1>MARVEL-OUS HEROES!!! </h1> <hr>
+      <%= link_to "SuperHeroes!", superheroes_path %> | | <%= link_to "Make A Hero!", new_superhero_path %> | | <%= link_to "SuperPowers!", superpowers_path %>
+      <hr>
+    </header>
     <%= yield %>
   </body>
 </html>
