@@ -1,0 +1,7 @@
+<h1>Create a new Superpower!</h1>
+
+<%=form_for @superpower do |f|%>
+  Name: <%=f.text_field :name%><br>
+  Description: <%=f.text_field :description%><br>
+  <%=f.submit%>
+<%end%>

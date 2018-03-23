@@ -1,0 +1,5 @@
+<h1><%=@superhero.name%> A.K.A. <%=@superhero.super_name%></h1>
+
+<h2>Super Power: <%=link_to @superhero.superpower.name, @superhero.superpower%></h2><br>
+
+<%=link_to "Back to all superheroes", superheroes_path%>
