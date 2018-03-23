@@ -1,5 +1,10 @@
 <h2>All Superheroes</h2>
 
+<%#= form_tag("/superheroes/search", method: "get") do %>
+  <%#= collection_select :superhero, :superpower, Superpower.all, :id, :name %>
+  <%#= submit_tag("Search") %>
+<%#=end %>
+
 <ul>
   <% @superheroes.each do |superhero| %>
     <li>
