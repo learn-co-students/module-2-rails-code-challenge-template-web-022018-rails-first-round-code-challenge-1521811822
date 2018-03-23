@@ -1,0 +1,5 @@
+<h1><%= @superhero.super_name %></h1>
+<ul>
+  <li> <strong>Secret Identity: </strong><%= @superhero.name %> </li>
+  <li> <strong>Superpower: </strong><%= link_to @superhero.superpower.name.capitalize, superpower_path(@superhero.superpower) %> </li>
+</ul>

@@ -1,9 +1,14 @@
-<h2>All Superheroes</h2>
+<h1>All Superheroes</h1>
+
+<h3>Filter By Power</h3>
+<% @superpowers.each do |power| %>
+  <strong><%= link_to power.name.capitalize, superheroes_path(superpower_id: power.id) %></strong>
+<% end %>
 
 <ul>
   <% @superheroes.each do |superhero| %>
     <li>
-      <%= superhero.super_name %>
+      <%= link_to superhero.super_name, superhero_path(superhero) %>
     </li>
     <br>
   <% end %>
