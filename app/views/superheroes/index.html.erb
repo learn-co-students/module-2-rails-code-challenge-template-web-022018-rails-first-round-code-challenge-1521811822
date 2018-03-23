@@ -1,10 +1,20 @@
 <h2>All Superheroes</h2>
 
+<%=form_tag "superheroes", method: :get do%>
+  <%=collection_select :search, :superpower_id, @superpowers, :id, :name%>
+  <%=submit_tag "Search"%>
+<%end%>
+
 <ul>
   <% @superheroes.each do |superhero| %>
     <li>
-      <%= superhero.super_name %>
+      <%= link_to superhero.super_name, superhero%>
     </li>
     <br>
   <% end %>
 </ul>
+<%if @search_flag%>
+  <%=link_to "Clear filter", superheroes_path%>
+<%else%>
+  <%=link_to "Create a new Hero", new_superhero_path%>
+<%end%>

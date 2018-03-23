@@ -1,0 +1,16 @@
+<h1><%=@superpower.name%></h1>
+<h3><%=@superpower.description%></h3>
+
+<%if @superheroes != []%>
+  <h4> Superheroes with <%=@superpower.name%></h4>
+  <% @superheroes.each do |superhero| %>
+    <li>
+      <%= link_to superhero.super_name, superhero%>
+    </li>
+    <br>
+  <% end %>
+<%else%>
+  <h4>No superheroes have <%=@superpower.name%></h4>
+<%end%>
+
+<%=link_to "Back to all superpowers", superpowers_path%>
