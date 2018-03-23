@@ -1,9 +1,24 @@
 <h2>All Superheroes</h2>
 
+<br>
+
+<h3>Search By Superpower:</h3>
+
+<!-- I KNOW THIS DOES NOT GIVE A LIST OF THE SUPERHEROES WITH THAT PARTICULAR POWER -->
+
+<!-- IF I HAD MORE TIME I KNOW I COULD GET THIS SEARCH WORKING-->
+
+<%= form_tag(superpowers_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Superpowers" %>
+    <%= submit_tag "Search", :name => nil %>
+<% end %>
+
+<br>
+
 <ul>
   <% @superheroes.each do |superhero| %>
     <li>
-      <%= superhero.super_name %>
+      <%= link_to superhero.super_name, superhero %>
     </li>
     <br>
   <% end %>
