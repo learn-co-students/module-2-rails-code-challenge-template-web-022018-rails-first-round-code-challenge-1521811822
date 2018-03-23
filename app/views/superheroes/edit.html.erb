@@ -1,0 +1,6 @@
+<h1>Edit Hero</h1>
+<%= render "form" %>
+
+<%= form_tag superhero_path(@superhero), method: "delete" do %>
+  <%= submit_tag name="Delete" %>
+<% end %>
