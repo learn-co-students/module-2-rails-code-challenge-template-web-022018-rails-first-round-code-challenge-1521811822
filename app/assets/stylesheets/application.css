@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+.header{
+  text-align: center;
+}
+
+.header a{
+  text-decoration: none;
+}
+
+a.hover{
+  color: black
+}
