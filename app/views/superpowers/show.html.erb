@@ -1,0 +1,14 @@
+<h1><%= @superpower.name %></h1>
+
+ <p> Description of Superpower: <%= @superpower.description %> </p>
+
+  <p> All heroes with the superpower: <%= @superpower.name %></p>
+
+  <ul>
+   <% @superpower.superheroes.each do |hero| %>
+     <li><%= link_to hero.super_name, superhero_path(hero) %></li>
+   <% end %>
+  </ul>
+
+ <p><%= link_to "Return to Superpowers", superpowers_path %></p>
+ <p><%= link_to "Return to Superheroes", superheroes_path %></p>
