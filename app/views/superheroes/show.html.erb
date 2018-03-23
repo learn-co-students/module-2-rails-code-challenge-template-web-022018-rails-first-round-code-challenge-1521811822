@@ -1,0 +1,9 @@
+<h1><%= @superhero.super_name %></h1>
+
+ <p> Real Name: <%= @superhero.name %></p>
+
+ <p> Their Superpower is: <%=link_to @superhero.superpower.name, superpower_path(@superhero.superpower) %></p>
+
+ <%= button_to "Create a new Superhero!", new_superhero_path, method: :get %>
+ <%= button_to "View all existing Superheroes", superheroes_path, method: :get %>
+ <%= button_to "View all existing Superpowers", superpowers_path, method: :get %>
