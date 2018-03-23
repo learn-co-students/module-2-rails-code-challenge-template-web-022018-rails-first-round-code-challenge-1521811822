@@ -1,10 +1,10 @@
 class SuperheroesController < ApplicationController
   def index
-    # if params[:superpower]
-    #   @superheroes = Superhero.all.select{|superhero| superhero.superpower == params[:superpower]}
-    # else
+    if params[:superhero]
+      @superheroes = Superhero.all.select{|superhero| superhero.superpower_id == params[:superhero][:superpower].to_i}
+    else
       @superheroes = Superhero.all
-    # end
+    end
   end
 
   def new
