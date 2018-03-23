@@ -1,9 +1,11 @@
 <h1>All Superheroes</h1>
 
 <h3>Filter By Power</h3>
-<% @superpowers.each do |power| %>
-  <strong><%= link_to power.name.capitalize, superheroes_path(superpower_id: power.id) %></strong>
+<%= form_tag superheroes_path, method: "get" do %>
+  <%= select_tag :superpower_id, options_from_collection_for_select(Superpower.all, :id, :name) %>
+  <%= submit_tag "Filter" %>
 <% end %>
+
 
 <ul>
   <% @superheroes.each do |superhero| %>
